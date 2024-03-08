@@ -577,7 +577,7 @@ void MyTcpSocket::recvMsg()
            }
         }else if(fileInfo.isFile()){
             //是一个常规文件
-            strcpy(respdu->caData, MOVE_FILE_OK);
+            strcpy(respdu->caData, MOVE_FILE_FAILURED);
         }
         write((char*)respdu, respdu->uiPDULen);
         free(respdu);
